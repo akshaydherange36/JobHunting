@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head><marquee><font size="45" color="Sky Blue" face='verdana' style="inline-box-align: ">JOB HUNTING</marquee></font>
+
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: right;
+  padding: 18px 25px;
+  text-decoration: azure
+  ;
+}
+body{
+    background-image: url("2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+
+</head>
+<body>
+    <br>
+<ul>
+  <li><a class="lazy" href="#home">Home</a></li>
+  <li><a href="#Menu"><select>
+  <option value="JobType" size="10">Job Type</option>
+  <option value="GovernmentJobs" onmousemove="govtjb()">Government Jobs</option>
+  <option value="PrivateJobs">Private Jobs</option>
+  <option value="DefenceServices">Defence Services</option>
+  <option value="WorkfromHome">Work from Home</option>
+</select></a></li>
+  <li><a href="#Links">Links</a></li>
+  <li><a href="#Contact">Contact</a></li>
+    <li><a href="#About">About</a></li>
+</ul>
+<script>
+function govtjb()
+{
+	<ul>
+ 		 <li><a href="Administrationjb">Administration Jobs</a></li>
+	</ul>
+}
+</script>
+</body>
+</html>
+

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Job Hunting Register</title>
+        <style>
+            .glow {
+  font-size: 50px;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+p{
+    font-family: sans-serif;
+    font-size: larger;
+}
+name{
+    margin-top: 10%;
+    margin-left: 10%;
+    
+    font-size: xx-large;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 80%;
+  margin-left: 6%;
+  margin-top: 5%;
+  word-spacing: 8px;
+  line-height: 1.6;
+  font-size: x-large;
+  
+  
+  
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  background-color: #66ccff;
+  opacity: 1.0;
+  
+  transition-duration: 2s;
+}
+p{
+    margin-left: 20%;
+    
+} 
+body{
+    background-image: url("Home.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #008ae6, 0 0 40px #008ae6, 0 0 50px #008ae6, 0 0 60px #008ae6, 0 0 70px #008ae6;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #193366, 0 0 40px #193366, 0 0 50px #193366, 0 0 60px #193366, 0 0 70px #193366, 0 0 80px #193366;
+  }
+}
+        </style>
+    </head>
+<body>
+    <font class="glow" >JOB HUNTING
+        
+    </font>
+    <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+<name><font face="Times New Roman"  size="36" color="white"><b><i style="margin-left: 35%;color: black">Register</i></b></font></name>
+<div class="card">
+    <p id="51"></p><hr>
+<p id="52"></p><hr>
+<p id="53"></p><hr>
+<p id="54"></p><hr>
+<p id="55"></p><hr>
+<p id="56"></p><hr>
+<p id="57"></p><hr>
+<p id="58"></p><hr>
+<p id="59"></p><hr>
+<p id="60"></p><hr>
+    <p id="61"></p><hr>
+<p id="62"></p><hr>
+<p id="63"></p><hr>
+<p id="64"></p><hr>
+<p id="65"></p><hr>
+<p id="66"></p><hr>
+<p id="67"></p><hr>
+<p id="68"></p><hr>
+<p id="69"></p><hr>
+<p id="70"></p><hr>
+<p id="a"></p>
+<script>
+// Check browser support
+if (typeof(Storage) !== "undefined") {
+  
+  var i;
+  var j;
+for (i = 51; i <=localStorage.totaluser;i++)
+ {	
+	j=i+10;
+	
+ 	document.getElementById(i).innerHTML =localStorage.getItem(i)+" \t\t"+localStorage.getItem(j);
+ 	
+ }
+
+  
+} 
+else
+ {
+  document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
+</script>
+
+</body>
+</html>

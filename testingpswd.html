@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head><link rel="icon" href="loogoo.png" type="image/png" sizes="16x16">
+    <title>
+        Job Hunting Log-In 
+    </title>
+    <style>
+        Body {  
+  font-family: Calibri, Helvetica, sans-serif;  
+  background-image: url("AKLOGIN.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}  
+button {   
+          background-color: #ffad33;
+       width: 50%;
+       height: 40px;
+       
+        color: white;   
+         
+        margin: 5px 150px;   
+        border: none;   
+        cursor: pointer;   
+        border-radius: 16px;
+
+ 
+         } 
+         b{
+             font-family: inherit;
+             font-size: xx-large;
+             margin-left: 38%;
+         }
+ form {   
+        border: 2px solid #04AA6D; 
+        width: 40%;
+        
+              margin-top: 3%;
+              margin-left: 40%;
+              opacity: 0.9;
+
+    }   
+ input[type=text], input[type=password] {   
+        width: 40%;   
+        margin-top: 10px;
+        margin-left: 50px;
+        padding: 12px 20px;   
+        display: inline-block;   
+        border: 2px solid black;   
+        box-sizing: border-box;   
+    }  
+ button:hover {   
+        opacity: 0.7;   
+    }   
+ .glow {
+     
+     margin-left: 50%;
+     
+  font-size: 50px;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #008ae6, 0 0 40px #008ae6, 0 0 50px #008ae6, 0 0 60px #008ae6, 0 0 70px #008ae6;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #193366, 0 0 40px #193366, 0 0 50px #193366, 0 0 60px #193366, 0 0 70px #193366, 0 0 80px #193366;
+  }
+}
+     
+ .container {   
+        padding: 25px;   
+        background-color: lightblue; 
+ 
+    </style>
+<script>
+function check() 
+{
+    var names=["Nachiket","AkshayD","AkshayS"];
+    var pswd=["1234","5678","9876"];
+  
+  var UserN = document.forms["myForm"]["fname"].value;
+    var UserP = document.forms["myForm"]["password"].value;
+     var s;                                                                      //document.getElementById("demo").innerHTML =UserN;
+     var i;
+     var t;
+     var z =localStorage.totaluser;
+
+        for(i = 51; i <= z; i++)                                           //   document.getElementById("demo").innerHTML =UserP ;
+     {
+
+        t = localStorage.getItem(i);
+       
+
+         if(UserN=== t)
+         {
+             s = i+10;
+                      var r =localStorage.getItem(s);
+                      if(UserP===r)
+                      {
+                           window.open("index.html","_self");
+                      }
+                      else
+                      {
+                          document.getElementById("demo").innerHTML = "Wrong Password";
+                      }
+         }
+     }
+}
+     
+function ToAdmin()
+{
+    window.open("adminpg.html","_self");
+}
+
+function TOregister()
+{
+    window.open("Registerpg.html","_self");
+}
+</script>
+</head>
+<body>
+<font class="glow" >JOB HUNTING
+          </font>
+          <form name="myForm" onsubmit="check()" method="get">  
+        <div class="container">  
+            <b>User Login</b><br><br>
+            <label style="margin-top: 10px;margin-left: 50px">Username : </label>   
+            <input type="text" placeholder="Enter Username" name="fname" required>  
+            <br><label style="margin-top: 10px;margin-left: 55px">Password : </label>   
+            <input type="password" placeholder="Enter Password" name="password" required>  
+            <br>
+            <br>
+            <p style="font-family: monospace;"> <button  onclick="check()" type="button" value="log_In" name="Log In" > Sign In</button>
+                <a style="font-family: cursive; color: red;margin-left: 45%"><span id="demo"></span></a></p>
+            <p style="font-family: monospace"><button onclick="ToAdmin()" type="button" value="AdminLogIn" name="Admin Log In" > Admin Log In</button>
+            <p style="font-family: monospace"><button onclick="TOregister()" type="button" value="AdminLogIn" name="Admin Log In" >Didn't have an acc. Register</button>
+<p>
+    <span id="abc"></span>
+    </p>
+        </div>   
+    
+    </form>   
+
+</body>
+</html>

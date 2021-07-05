@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        PLSALK 
+    </title>
+<script>
+function check() {
+  var names=["Nachiket","AkshayD","AkshayS"];
+  var pswd=["1234","5678","9876"];
+  
+  var UserN = document.forms["myForm"]["fname"].value;
+    var UserP = document.forms["myForm"]["password"].value;
+                                                                           //document.getElementById("demo").innerHTML =UserN;
+                                                //   document.getElementById("demo").innerHTML =UserP ;
+
+
+    t=names.includes(UserN);//true or false
+                           
+ 
+       
+    if(t===true)
+    {
+                                                   
+       var a=names.indexOf(UserN);
+                                                          //document.getElementById("demo").innerHTML =t;
+
+       var correctPswd=pswd[a];
+                                           
+
+        if(UserP===correctPswd)
+        {
+                        document.getElementById("demo").innerHTML = "Correct Password";
+
+         window.open("index.html");
+        }
+        else
+        {
+            document.getElementById("demo").innerHTML = "Wrong Password";
+        }
+    }
+}
+</script>
+</head>
+<body>
+
+<form name="myForm" onsubmit="check()">
+  Name: <input type="text" name="fname">
+  <input type="password" placeholder="Enter Password" name="password" required>
+  <p> <input type="submit" value="log_In" name="Log In" />
+  <span id="demo"></span></p>
+</form>
+
+</body>
+</html>

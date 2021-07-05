@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head><link rel="icon" href="loogoo.png" type="image/png" sizes="16x16">
+    <title>
+        Job Hunting Register
+    </title>
+    <style>
+        Body {  
+  font-family: Calibri, Helvetica, sans-serif;  
+  background-image: url("AKLOGIN.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}  
+button {   
+          background-color: #ffad33;
+       width: 50%;
+       height: 40px;
+       
+        color: white;   
+         
+        margin: 5px 150px;   
+        border: none;   
+        cursor: pointer;   
+        border-radius: 16px;
+
+ 
+         } 
+         b{
+             font-family: inherit;
+             font-size: xx-large;
+             margin-left: 30%;
+         }
+ form {   
+        border: 2px solid #04AA6D; 
+        width: 40%;
+        
+              margin-top: 3%;
+              margin-left: 40%;
+              opacity: 0.9;
+
+    }   
+ input[type=text], input[type=password] {   
+        width: 40%;   
+        margin-top: 10px;
+        margin-left: 50px;
+        padding: 12px 20px;   
+        display: inline-block;   
+        border: 2px solid black;   
+        box-sizing: border-box;   
+    }  
+ button:hover {   
+        opacity: 0.7;   
+    }   
+ .glow {
+     
+     margin-left: 50%;
+     
+  font-size: 50px;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #008ae6, 0 0 40px #008ae6, 0 0 50px #008ae6, 0 0 60px #008ae6, 0 0 70px #008ae6;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #193366, 0 0 40px #193366, 0 0 50px #193366, 0 0 60px #193366, 0 0 70px #193366, 0 0 80px #193366;
+  }
+}
+     
+ .container {   
+        padding: 25px;   
+        background-color: lightblue; 
+ 
+    </style>
+<script>
+ function saveusername()
+	{
+		 if (localStorage.totaluser) 
+		{
+      			localStorage.totaluser = Number(localStorage.totaluser)+1;
+    		} 
+		else
+		{
+      			localStorage.totaluser = 51;
+    		}
+			
+		var usercount= localStorage.totaluser;
+		var userID = document.forms["myForm"]["fname"].value;
+
+	localStorage.setItem(usercount,userID);
+	savepassword();
+	}
+        function savepassword()
+	{
+		 if (localStorage.totalpassword) 
+		{
+      			localStorage.totalpassword = Number(localStorage.totalpassword)+1;
+    		} 
+		else
+		{
+      			localStorage.totalpassword = 61;
+    		}
+			
+		var passwordcount= localStorage.totalpassword;
+		var userPass = document.forms["myForm"]["password"].value;
+
+	localStorage.setItem(passwordcount,userPass);
+	ToLogin();
+	}
+        function ToLogin()
+{
+    window.open("testingpswd.html");
+}
+</script>
+</head>
+<body>
+<font class="glow" >JOB HUNTING
+          </font>
+          <form name="myForm" onsubmit="saveusername()">  
+        <div class="container">  
+            <b>User Registration</b><br><br>
+            <label style="margin-top: 10px;margin-left: 50px">Username : </label>   
+            <input type="text" placeholder="Enter Username" name="fname" required>  
+            <br><label style="margin-top: 10px;margin-left: 55px">Password : </label>   
+            <input type="text" placeholder="Enter Password" name="password" required>  
+            <br>
+            <br>
+            <p style="font-family: monospace;"> <button type="submit" value="register" name="register" > Register</button>
+                    <span id="demo"></span></p>
+           
+
+        </div>   
+    
+    </form>   
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="icon" href="loogoo.png" type="image/png" sizes="16x16">
+    <title>
+        Job Hunting Log-In 
+    </title>
+    <style>
+        Body {  
+  font-family: Calibri, Helvetica, sans-serif;  
+  background-image: url("AKLOGIN.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}  
+button {   
+       background-color: #4CAF50;   
+       width: 30%;
+       height: 50px;
+       
+        color: white;   
+         
+        margin: 10px 200px;   
+        border: none;   
+        cursor: pointer;   
+        border-radius: 16px;
+
+ 
+         }   
+ form {   
+        border: 2px solid #04AA6D; 
+        width: 40%;
+              margin-top: 5%;
+              margin-left: 40%;
+              opacity: 0.9;
+
+    }   
+ input[type=text], input[type=password] {   
+        width: 40%;   
+        margin-top: 10px;
+        margin-left: 50px;
+        padding: 12px 20px;   
+        display: inline-block;   
+        border: 2px solid black;   
+        box-sizing: border-box;   
+    }  
+ button:hover {   
+        opacity: 0.7;   
+    }  
+    h2{
+        font-family: cursive;
+        font-size: larger;
+        margin-left: 35%;
+        margin-bottom: 6%;
+        
+    }
+ .glow {
+     
+     margin-left: 50%;
+     
+  font-size: 50px;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #008ae6, 0 0 40px #008ae6, 0 0 50px #008ae6, 0 0 60px #008ae6, 0 0 70px #008ae6;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #193366, 0 0 40px #193366, 0 0 50px #193366, 0 0 60px #193366, 0 0 70px #193366, 0 0 80px #193366;
+  }
+}
+     
+ .container {   
+        padding: 25px;   
+        background-color: lightblue; 
+ 
+    </style>
+<script>
+function check() {
+  var names=["admin"];
+  var pswd=["admin"];
+  
+  var UserN = document.forms["myForm"]["fname"].value;
+    var UserP = document.forms["myForm"]["password"].value;
+                                                                           //document.getElementById("demo").innerHTML =UserN;
+                                                //   document.getElementById("demo").innerHTML =UserP ;
+
+
+    t=names.includes(UserN);//true or false
+                           
+ 
+       
+    if(t===true)
+    {   
+                                                   
+       var a=names.indexOf(UserN);
+                                                          //document.getElementById("demo").innerHTML =t;
+
+       var correctPswd=pswd[a];
+                                           
+
+        if(UserP===correctPswd)
+        {
+                        document.getElementById("demo").innerHTML = "Correct Password";
+
+         window.open("adminhome.html");
+        }
+        else
+        {
+            document.getElementById("demo").innerHTML = "Wrong Password";
+        }
+    }
+}
+</script>
+</head>
+<body>
+<font class="glow" >JOB HUNTING
+        
+</font><br>
+<form name="myForm" onsubmit="check()">  
+        <div class="container">   
+            <h2>Admin Log In</h2>
+            <label style="margin-top: 10pxs;margin-left: 50px">Admin Username : </label>   
+            <input type="text" placeholder="Enter admin Username" name="fname" required>  
+            <br> <label style="margin-top: 10pxs;margin-left: 55px">Admin Password : </label>   
+            <input type="password" placeholder="Enter admin Password" name="password" required>  
+            <br>
+            <br>
+            <p style="font-family: monospace"> <button type="submit" value="log_In" name="Log In" ><h3> Sign In</h3></button>
+                    <span id="demo"></span></p>
+  
+        </div>   
+    </form>     
+</body>
+</html>

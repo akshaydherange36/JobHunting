@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="icon" href="loogoo.png" type="image/png" sizes="16x16">
+     <title>
+        Job Hunting Log-In 
+    </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+   background-image: url("Home.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align:center;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+
+}
+
+.sidenav a:hover{
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:  #003366;
+  opacity: 0.5;
+}
+ tags{
+                position: relative;
+                 font-family: sans-serif;
+                text-transform: uppercase;
+                font-size: 2em;
+                letter-spacing: 4px;
+                overflow: hidden;
+                background: linear-gradient(90deg, rgb(161, 38, 38), #fff, rgb(136, 15, 15));
+                background-repeat: no-repeat;
+                background-size: 80%;
+                animation: animate 5s ease-in-out both ;
+                padding-right: 5px;
+ }
+
+li {
+  float: left;
+}
+.glow {
+  font-size: 50px;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #008ae6, 0 0 40px #008ae6, 0 0 50px #008ae6, 0 0 60px #008ae6, 0 0 70px #008ae6;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #193366, 0 0 40px #193366, 0 0 50px #193366, 0 0 60px #193366, 0 0 70px #193366, 0 0 80px #193366;
+  }
+}
+li a {
+  display: block;
+  color: white;
+  text-align: right;
+  padding: 18px 25px;
+  text-decoration: azure;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 80%;
+  margin-left: 6%;
+  margin-top: 5%;
+  word-spacing: 8px;
+  line-height: 1.6;
+  font-size: x-large;
+  
+  
+  
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  background-color: #ccffff;
+  opacity: 1.0;
+  
+  transition-duration: 2s;
+}
+ 
+</style>
+<script>
+function check() 
+{
+    var names=["Nachiket","AkshayD","AkshayS"];
+    var pswd=["1234","5678","9876"];
+  
+  var UserN = document.forms["myForm"]["fname"].value;
+    var UserP = document.forms["myForm"]["password"].value;
+     var s;                                                                      //document.getElementById("demo").innerHTML =UserN;
+     var i;
+     var t;
+     var z =localStorage.totaluser;
+
+        for(i = 51; i <= z; i++)                                           //   document.getElementById("demo").innerHTML =UserP ;
+     {
+
+        t = localStorage.getItem(i);
+       
+
+         if(UserN=== t)
+         {
+             s = i+10;
+                      var r =localStorage.getItem(s);
+                      if(UserP===r)
+                      {
+                           window.open("index.html","_self");
+                      }
+                      else
+                      {
+                          document.getElementById("demo").innerHTML = "Wrong Password";
+                      }
+           }
+    }
+}
+     
+function ToAdmin()
+{
+    window.open("adminpg.html","_self");
+}
+
+function TOregister()
+{
+    window.open("Registerpg.html","_self");
+}
+</script>
+</head>
+<body>
+<font class="glow" >JOB HUNTING
+          </font>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="govjobs1.html">Government Jobs</a>
+  <a href="Private.html">Private Jobs</a>
+  <a href="Defence.html">Defence Services</a>
+  <a href="contactus.html">Contact</a>
+  <a href="About.html">About</a>
+</div>
+
+          <br>
+          <br>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Home</span>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+ <div class="card">
+  <div class="container">
+       
+    <p>Jobs are an important part of our lives, we always expect ourselves at a better position in our life. 
+<br>The Job Hunting is such a place where you will find the jobs updates you need.
+<br>You can find different type of job updates here,like the Government Jobs as well as Private Jobs. 
+<br>We also give updates of the Defence Services jobs as well.
+<br>
+We Try Our Best to make you updated about the recent job updates,<br>
+<b style="font-size: larger;margin-left: 30%">Happy Job Hunting!!!!! </b> </p> 
+  </div>
+</div>
+</body>
+</html> 
